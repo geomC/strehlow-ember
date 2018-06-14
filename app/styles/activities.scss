@@ -1,0 +1,15 @@
+main.activities {
+  background-image: url("/assets/img/bg/herz.jpg");
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 120px 80px;
+
+  .activities-gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

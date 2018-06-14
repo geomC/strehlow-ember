@@ -1,0 +1,20 @@
+a {
+  color: $cstm-light-green;
+
+  &:link    {   text-decoration: none; }
+  &:visited {   text-decoration: none; }
+  &:hover   {
+    text-decoration: none;
+  }
+  &:active  {   text-decoration: none; }
+}
+@media only screen and (max-device-width: 600px) {
+  a[href^="tel"]:link,
+  a[href^="tel"]:visited,
+  a[href^="tel"]:hover,
+  a[href^="mail"]:link,
+  a[href^="mail"]:visited,
+  a[href^="mail"]:hover {
+    text-decoration: underline;
+  }
+}

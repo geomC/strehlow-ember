@@ -1,0 +1,23 @@
+.activity-item {
+  width: 350px;
+  padding: 24px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 4px solid #fff;
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 36px;
+    right: 8px; // TODO: this is dirty
+    color: #fff;
+    opacity: 0.7;
+    width: 100%;
+    text-align: center;
+  }
+}
+

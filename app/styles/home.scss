@@ -1,0 +1,12 @@
+.home {
+  background-image: url("/assets/img/bg/sky_big.jpg");
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin-bottom: 1em;
+  }
+}
