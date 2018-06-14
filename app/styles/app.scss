@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import "colors";
+@import "header";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Raleway, Helvetica, sans-serif;
+  color: #171717;
+  background-color: $cstm-light-blue;
+}
+
+a {
+  color: $cstm-light-green;
+  transition: opacity 0.3s;
+
+  &:link    {   text-decoration: none; }
+  &:visited {   text-decoration: none; }
+  &:hover   {
+    text-decoration: none;
+    opacity: 0.8;
+
+  }
+  &:active  {   text-decoration: none; }
+}
+@media only screen and (max-device-width: 600px) {
+  a[href^="tel"]:link,
+  a[href^="tel"]:visited,
+  a[href^="tel"]:hover,
+  a[href^="mail"]:link,
+  a[href^="mail"]:visited,
+  a[href^="mail"]:hover {
+    text-decoration: underline;
+  }
+}
