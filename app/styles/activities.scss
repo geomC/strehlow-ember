@@ -1,5 +1,5 @@
 main.activities {
-  background-image: url("/assets/img/bg/herz.jpg");
+  background-image: url("/assets/img/bg/sunset1.jpg");
   background-size: cover;
   background-position: center;
   flex-direction: column;
@@ -11,5 +11,8 @@ main.activities {
   .activities-gallery {
     display: flex;
     flex-wrap: wrap;
+    padding: 24px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 8px;
   }
 }
