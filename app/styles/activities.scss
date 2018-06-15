@@ -3,9 +3,7 @@ main.activities {
   background-size: cover;
   background-position: center;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
   padding: 120px 80px;
 
   .activities-gallery {
@@ -14,5 +12,18 @@ main.activities {
     padding: 24px;
     background-color: rgba(0,0,0,0.3);
     border-radius: 8px;
+  }
+
+  h2 {
+    color: #fff;
+    margin-bottom: 24px;
+  }
+
+}
+
+
+@include for-phone-only {
+  main.activities {
+    padding: 20px;
   }
 }

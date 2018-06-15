@@ -1,7 +1,10 @@
 .activity-item {
-  width: 350px;
-  padding: 24px;
+  min-width: 350px;
+  max-width: 400px;
+  flex-basis: 33%;
+  margin: 24px;
   position: relative;
+  flex-grow: 1;
 
   img {
     width: 100%;
@@ -11,9 +14,7 @@
   }
 
   .caption {
-    position: absolute;
-    bottom: 36px;
-    right: 8px; // TODO: this is dirty
+    padding-top: 2px;
     color: #fff;
     opacity: 0.7;
     width: 100%;
