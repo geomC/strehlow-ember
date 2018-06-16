@@ -1,0 +1,160 @@
+@import "breakpoints";
+@import "colors";
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999999999; // to work with liquid fire
+}
+
+// Nav
+////////////////////
+
+
+@keyframes blend-in {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  transform: translateY(-100px);
+  opacity: 0;
+  animation: 1s blend-in 1s ease-out forwards;
+
+  @include for-phone-only {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include for-tablet-portrait-up {
+    justify-content: space-around;
+  }
+
+  @include for-tablet-landscape-up {
+    justify-content: flex-end;
+  }
+
+  a {
+    display: block;
+    color: #fff;
+    opacity: 0.7;
+    padding: 20px 2px 4px 2px;
+    transition: opacity 0.3s;
+    font-family: Raleway, Helvetica, sans-serif;
+
+    @include for-phone-only {
+      padding: 10px;
+    }
+    @include for-tablet-landscape-up {
+      justify-content: flex-end;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  a.active {
+    border-bottom: 2px solid $cstm-light-green;
+    opacity: 1;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+
+}
+
+
+// Mobile Menu
+////////////////////
+
+#menu-btn, .menu-icon {
+  display: none;
+}
+
+#menu-btn:checked ~ header {
+  max-height: 0;
+}
+
+
+
+@include for-phone-only {
+  .menu-icon {
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    z-index: 999;
+  }
+  header {
+    position: static;
+    max-height: 800px;
+    transition: .4s ease-out;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+  }
+  nav {
+    padding: 12px;
+    background-color: #fff;
+    opacity: 1;
+    animation: none;
+    transform: none;
+    align-items: flex-start;
+
+    a {
+      color: #171717;
+    }
+
+    a.active {
+      border: none;
+      background-color: #0D3349;
+      color: #fff;
+    }
+  }
+
+}
+
+
+/* menu icon */
+
+ .menu-icon {
+  cursor: pointer;
+  padding: 28px 20px;
+  user-select: none;
+}
+
+ .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+ .menu-icon .navicon:before,
+ .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+ .menu-icon .navicon:before {
+  top: 5px;
+}
+
+ .menu-icon .navicon:after {
+  top: -5px;
+}
