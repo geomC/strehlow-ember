@@ -1,7 +1,8 @@
 main.activities {
   background-image: url("/assets/img/bg/sunset1.jpg");
-  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   flex-direction: column;
   align-items: center;
   padding: 120px 80px;
@@ -10,15 +11,25 @@ main.activities {
     display: flex;
     flex-wrap: wrap;
     padding: 24px;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 8px;
-  }
+    justify-content: space-between;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 12px;
 
+  }
 }
 
 
 @include for-phone-only {
+
   main.activities {
+    background-color: $cstm-sky-blue;
+    background-image: none;
     padding: 20px;
+
+    .activities-gallery {
+      // don't show
+      padding: 0;
+      background: none;
+    }
   }
 }
